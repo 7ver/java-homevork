@@ -28,7 +28,7 @@ public class HotAndCold {
         int userinput = sc.nextInt();
 
         if (HotAndCold.invalidNumberHandle(userinput)) {
-            continueStateHandle(userinput);
+            startGameIteration();
             return;
         }
 
@@ -42,7 +42,7 @@ public class HotAndCold {
     }
 
     private static boolean invalidNumberHandle(int number) {
-        if (number < 0 || number > 100) {
+        if (number <= 0 || number > 100) {
             System.out.println();
             System.out.println("Введите число в диапазоне от 1 до 100");
             System.out.println();
