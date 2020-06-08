@@ -1,6 +1,5 @@
-package HomeWork.HomeWork1;
+package HomeWork.HomeWork2;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Task3 {
