@@ -7,6 +7,8 @@ public class HotAndCold {
     public static void main(String[] args) {
         System.out.println("Сыграем в игру: 'Горячо и холодно'");
         System.out.println("Я задумал число между 1 и 100, поробуй отгадать его");
+        System.out.println("Если введеное тобой число больше загаданного то это 'Горячо'");
+        System.out.println("если меньше то 'Холодно'.");
 
         HotAndCold.randomNumber = new Random().nextInt(100) + 1;
         HotAndCold.startGameIteration();
