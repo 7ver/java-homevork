@@ -3,19 +3,23 @@ package homework.homework7;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class WendingMachine {
     private final ArrayList<Drink> drinkList = new ArrayList<>();
     private int account = 0;
+    private static final Logger log = LogManager.getLogger(WendingMachine.class);
 
     WendingMachine() {
         this.addDrink(DrinkEnum.COCA_COLA, 42, 1);
         this.addDrink(DrinkEnum.FANTA, 21, 2);
         this.addDrink(DrinkEnum.SPRITE, 12, 3);
-
         System.out.println("You can buy drinks here!");
     }
 
     public void init() {
+        log.info("WendingMachine class inited!");
         System.out.println();
         this.showtMenuList();
         this.getUserAccount();
@@ -59,6 +63,7 @@ public class WendingMachine {
         }
 
         if (userOption == null) {
+            log.error("Wrong drink id. InputId: " + drinkId);
             System.out.println("You entered the wrong drink id. Try again");
             this.buyOptionsHandler();
             return;
@@ -76,6 +81,7 @@ public class WendingMachine {
             this.buyOptionsHandler();
         } else {
             System.out.println("You dont have enough money on your account!");
+            log.error("Dont have enough money. Drink: " + drink.getName() + " Account: " + this.account);
             this.init();
         }
     }
