@@ -1,5 +1,5 @@
 package homework.homework9.interfaces;
 
-public interface IRun {
-    void run();
+public interface Fly {
+    void fly();
 }

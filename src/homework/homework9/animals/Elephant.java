@@ -1,9 +1,8 @@
 package homework.homework9.animals;
 
-import homework.homework9.animals.Animal;
-import homework.homework9.interfaces.IRun;
+import homework.homework9.interfaces.Run;
 
-public class Elephant extends Animal implements IRun {
+public class Elephant extends Animal implements Run {
     @Override
     public String getName() {
         return "Elephant";

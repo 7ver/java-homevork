@@ -6,6 +6,7 @@ public class Censor {
         String censuredString = "{censured}";
         String startStringRegexp = "^" + baseRegExp;
         String middleStringRegexp = "[\\s]" + baseRegExp;
+        String endStringRegExp = baseRegExp + "";
 
         return text.replaceAll(startStringRegexp, censuredString)
                    .replaceAll(middleStringRegexp, censuredString);
