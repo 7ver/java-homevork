@@ -26,8 +26,8 @@ public class FileCreator {
 
             return file.createNewFile();
         } catch(IOException ex) {
-            log.info("File " + name + " creation failed");
-            log.debug("File " + name + " creation failed. With error " + ex);
+            log.error("File {} creation failed", name);
+            log.debug("Error: {}", ex);
 
             return false;
         }
